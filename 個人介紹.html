@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html style="font-family: DFKai-sb;">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8">
+        <title>個人介紹</title>
+        <link rel="stylesheet" href="個人介紹.css">
+    </head>
+    <body>
+        <h1 style="text-align: center;">個人介紹頁面</h1>
+        <hr size="10" color="brown"/>
+        <div class="titleblock">
+            <span
+                class="about"
+                onclick="changetoA()"
+                onmousedown="down(this)"
+                onmouseup="up(this)"
+                onmouseover="over(this)"
+                onmouseleave="leave(this)"
+                >個人資料</span>
+            <span
+                class="about"
+                onclick="changetoB()"
+                onmousedown="down(this)"
+                onmouseup="up(this)"
+                onmouseover="over(this)"
+                onmouseleave="leave(this)"
+                >學經歷</span>
+            <span
+                class="about"
+                onclick="goToBlog()"
+                onmousedown="down(this)"
+                onmouseup="up(this)"
+                onmouseover="over(this)"
+                onmouseleave="leave(this)"
+                >返回首頁</span>
+        </div>
+        <div id="A">
+            <div class="title">姓名：陳崇顥</div>
+            <div class="body">
+                <div class="left">
+                    <img src="個人照片.jpg" >
+                </div>
+                <div class="right">
+                    <b>性別：</b>男性<br>
+                    <b>年齡：</b>34<br>
+                    <b>出生日期：</b>80年5月2日<br>
+                    <b>身高體重：</b>180公分／80公斤<br>
+                    <b>婚姻：</b>已婚，育有二子女<br>
+                    <b>電話：</b>0910312199<br>
+                    <b>line ID：</b><a href=https://line.me/ti/p/3ylt2TXgVB>snake800502</a><br>
+                    <b>電子郵件：</b>z123z06@gmail.com<br>
+                    <b>居住地：</b>新北市三重區<br>
+                    <b>持有駕照：</b>普通重型機車、普同小型車<br>
+                    <b>學歷：</b>銘傳大學 企業管理學系<br>
+                    <b>興趣：</b>遊戲、旅遊、美食<br>
+                    <b>Instagram：</b><a href=https://www.instagram.com/snake800502/>請點我</a>(未公開)
+                </div>
+            </div>
+        </div>
+        <div id="B" style="display:none">
+            <ul>
+                <li><b>求學階段</b><br>
+                    畢業於銘傳大學企業管理學系</li>
+                <li><b>餐飲經驗</b><br>
+                    畢業後從事餐飲業，以日式串燒居酒屋為主<br>
+                    之後也合股開過居酒屋，但後續因經營理念不同而結束</li>
+                <li><b>轉換產業</b><br>
+                    餐飲之後轉換跑道至傳統產業<br>
+                    於牛仔布匹公司當業務，但該產業越屬於夕陽產業<br>
+                    發現並無任何發展空間<br>
+                    決定再次轉換跑道</li>
+                <li><b>現階段</b><br>
+                    目前從網路上學習程式語言<br>
+                    一步一步努力開發自我</li>
+            </ul>
+        </div>
+        <p class="footer">© 2025 我的個人介紹頁面</p>
+        <script>
+            function changetoB(){
+                        let ADiv=document.querySelector("#A");
+                        let BDiv=document.querySelector("#B");
+                        ADiv.style.display="none";
+                        BDiv.style.display="block";
+                    }
+            function changetoA(){
+                        let ADiv=document.querySelector("#A");
+                        let BDiv=document.querySelector("#B");
+                        ADiv.style.display="block";
+                        BDiv.style.display="none";
+                    }
+            function over(title){
+                title.style.backgroundColor="#d55d5d"
+            }
+            function leave(title){
+                title.style.backgroundColor="brown"
+            }
+            function down(title){
+                title.style.fontWeight="normal"
+                title.style.color="black"
+            }
+            function up(title){
+                title.style.fontWeight="bold"
+                title.style.color="bisque"
+            }
+            function goToBlog(){
+                window.location.href="部落格.html"
+            }
+        </script>
+    </body>
+</html>00

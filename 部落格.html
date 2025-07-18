@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8">
+        <title>部落格首頁</title>
+        <link rel="stylesheet" href="部落格.css">
+        
+    </head>
+    <body>
+        <header>
+            <h1>部落格頁面</h1>
+            <nav>
+                <ul>
+                    <li><a href="部落格.html">首頁</a></li>
+                    <li><a href="個人介紹.html">關於我</a></li>
+                </ul>
+            </nav>
+            <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="搜尋文章...">
+        </header>
+        <main>
+            <section id="articles">
+                <article>
+                    <h2>轉職的開始</h2>
+                    <p>從意識到公司的產業狀況每況愈下...(2025.05.02)</p>
+                    <a href="article1.html">閱讀更多</a>
+                </article>
+    
+                <article>
+                    <h2>正在學習中</h2>
+                    <p>目前從網路上學習程式語言中，並...(2025.05.02)</p>
+                    <a href="article2.html">閱讀更多</a>
+                </article>
+    
+                <article>
+                    <h2>歡迎聯絡我</h2>
+                    <p>有喜歡的話歡迎聯絡我，這邊都可...(2025.05.02)</p>
+                    <a href="article3.html">閱讀更多</a>
+                </article>
+        </main>
+        <footer>
+            <p>© 2025 我的部落格頁面</p>
+        </footer>
+        <script>
+            function searchFunction() {
+                let input = document.getElementById("searchInput").value.toLowerCase();
+                let articles = document.querySelectorAll("#articles article");
+                
+                articles.forEach(function(article) {
+                    let title = article.querySelector('h2').textContent.toLowerCase();
+                    let content = article.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.indexOf(input) > -1 || content.indexOf(input) > -1) {
+                        article.style.display = "";
+                    } else {
+                        article.style.display = "none";
+                    }
+                });
+            }
+        </script>
+    </body>
+
+</html>

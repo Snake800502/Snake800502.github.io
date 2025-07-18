@@ -1,0 +1,144 @@
+h1{
+    font-size: 36px;
+    height: 50px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+    color: brown;
+    background-color: bisque;
+    padding: 10px;
+}
+
+.titleblock{
+    display: flex;
+    border: 5px double black; 
+    text-align: center;
+    justify-content: center;
+}
+
+.about{
+    text-decoration: none;
+    text-align: center;
+    color: bisque;
+    font-weight: bolder;
+    font-size: 20px;
+    background-color: brown;
+    width: 50%;
+    background-clip: padding-box;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: none;
+    flex: 1;
+    transition: all 0.3s;
+}
+.about:hover{
+    background-color: #a52a2a;
+    color:#fff
+
+}
+
+.about+.about{
+    border-left: 5px double black;
+}
+
+.body{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.left{
+    flex: none;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left img{
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    border-radius: 15px;
+    aspect-ratio: auto;
+    object-fit: cover;
+}
+.right{
+    flex: auto;
+    font-size: 20px;
+    width: 45%;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#fff2cc;
+    color: #964b00;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .right {
+        font-size: 16px;
+    }
+    .left img {
+        max-width: 300px;
+    }
+    .about {
+        font-size: 18px;
+    }
+}
+@media(max-width: 500px){
+    .body{
+        flex-direction: column;
+        align-items: center;
+    }
+    .titleblock{
+        min-width: 180px;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+    }
+    .about{
+        font-size: 15px;
+        width: 100%;
+        border: 5px double black;;
+        display: block;
+    }
+    .right{
+        font-size: 14px;
+        white-space: nowrap;
+        text-align: left;
+        width: 95%;
+        padding: 10px;
+    }
+    .left{
+        width: 100%;
+        padding: 10px;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left img{
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+        object-fit: contain;
+    }
+
+    }
+    .title{
+        white-space: nowrap;
+    }
+
